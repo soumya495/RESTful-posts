@@ -16,7 +16,7 @@ npm i
 npm start
 ```
 
-This is should install all the dependencies and fire up **localhost:3000**.
+This should install all the dependencies and fire up **localhost:3000**.
 
 ## Features
 
