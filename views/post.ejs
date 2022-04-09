@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs', {title: 'Post'}) %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="w-50 m-auto">
+      <div class="card text-center mt-5">
+        <div class="card-header">USER #<b><%= userId %></b></div>
+        <div class="card-body">
+          <h5 class="card-title"><%= title %></h5>
+          <p class="card-text"><%= body %></p>
+          <div class="d-flex justify-content-center">
+            <a href="/posts" class="btn btn-primary me-2">All Posts</a>
+            <form method="POST" action="/posts/<%= id %>?_method=DELETE">
+              <button class="btn btn-danger">Delete</button>
+            </form>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="/editpost/<%= id %>">Edit Post</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

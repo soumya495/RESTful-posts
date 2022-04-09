@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs', {title: 'New Post'}) %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <h1 class="mt-3 mb-3">Add a New Post</h1>
+      <form method="POST" action="/posts" class="w-50">
+        <section class="mt-2">
+          <label for="userId"><b>UserId:</b></label>
+          <br />
+          <input
+            type="number"
+            placeholder="userid"
+            name="userId"
+            id="userId"
+            class="form-control w-100"
+            required
+          />
+        </section>
+        <section class="mt-2">
+          <label for="title"><b>Title:</b></label>
+          <br />
+          <input
+            type="text"
+            placeholder="post title"
+            name="title"
+            id="title"
+            class="form-control w-100"
+            required
+          />
+        </section>
+        <section class="mt-2">
+          <label for="body"><b>Body:</b></label>
+          <br />
+          <textarea
+            class="form-control w-100"
+            name="body"
+            id="body"
+            placeholder="post body"
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+        </section>
+        <div class="d-flex">
+          <button class="btn btn-primary mt-3 me-2">Add Post</button>
+          <a href="/posts" class="btn btn-primary mt-3">All Posts</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

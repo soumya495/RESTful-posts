@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs', {title: 'Edit Post'}) %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container">
+      <h1 class="mt-3 mb-3">Edit Post</h1>
+      <form method="POST" action="/posts/<%= id %>?_method=PATCH" class="w-50">
+        <section class="mt-2">
+          <label for="title"><b>Title:</b></label>
+          <br />
+          <input
+            type="text"
+            placeholder="edit post title"
+            name="title"
+            id="title"
+            class="form-control w-100"
+            value="<%= title %> "
+            required
+          />
+        </section>
+        <section class="mt-2">
+          <label for="body"><b>Body:</b></label>
+          <br />
+          <textarea
+            class="form-control w-100"
+            name="body"
+            id="body"
+            placeholder="edit post body"
+            cols="30"
+            rows="5"
+            required
+          >
+<%= body %></textarea
+          >
+        </section>
+        <div class="d-flex">
+          <button class="btn btn-primary mt-3 me-2">Edit Post</button>
+          <a href="/posts/<%= id %> " class="btn btn-primary mt-3"
+            >Back To Post</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<div
+  class="container d-flex flex-wrap justify-content-center justify-content-md-between pb-5"
+>
+  <% for(let post of posts) { %>
+  <div class="card mt-5" style="width: 18rem">
+    <div class="card-body">
+      <h5 class="card-title"><%= post.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">User #<%= post.userId %></h6>
+      <p class="card-text"><%= post.body %></p>
+      <a href="/posts/<%= post.id %>" class="btn btn-primary">View Post</a>
+    </div>
+  </div>
+  <% } %>
+</div>

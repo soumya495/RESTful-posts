@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partials/head.ejs', {title: 'Posts'}) %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <h1 class="container mt-5">All Posts</h1>
+    <%- include('partials/posts-container.ejs', {posts}) %>
+  </body>
+</html>
